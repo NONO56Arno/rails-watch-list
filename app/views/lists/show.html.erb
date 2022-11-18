@@ -1,5 +1,6 @@
 <h2><%= @list.name %></h2>
 
+<%= cl_image_tag @article.photo.key, height: 300, width: 400, crop: :fill %>
 
 <button>
   <%= link_to "back to the list", lists_path %>

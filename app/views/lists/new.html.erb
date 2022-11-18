@@ -1,5 +1,9 @@
-<%= form_with model: @list do |t| %>
-  <%= t.label :name %>
-  <%= t.text_field :name %>
+<%= simple_form_for(@list) do |t| %>
+  <%= t.input :name %>
+  <%= t.input :photo, as: :file %>
   <%= t.submit %>
 <% end %>
+
+<button>
+  <%= link_to "back to the list", lists_path %>
+</button>
